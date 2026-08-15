@@ -1,0 +1,19 @@
+name: 群管助手
+display_name: 群管助手
+desc: 禁发关键词消息拦截 + 定时消息推送，每个功能均可用指令单独开关
+version: "1.4.0"
+author: 小寻(≧∇≦)
+repo: ""
+help: |
+  /gmg on/off — 总开关
+  /gmg ban on/off — 禁发功能开关
+  /gmg ban list — 查看禁发关键词
+  /gmg ban add 关键词 — 添加禁发关键词
+  /gmg ban del 关键词 — 删除禁发关键词
+  /gmg ban violations — 查看违规记录
+  /gmg ban resetviolations — 清空违规记录
+  /gmg timer on/off — 定时消息开关
+  /gmg timer list — 查看定时任务
+  /gmg timer add HH:MM [群号] 消息 [once|daily|interval:N] — 添加定时消息
+  /gmg timer del ID — 删除定时消息
+  /gmg status — 查看整体状态
