@@ -1,0 +1,94 @@
+{
+    "master_enable": {
+        "description": "插件总开关",
+        "type": "bool",
+        "default": true
+    },
+    "ban_enable": {
+        "description": "禁发消息功能开关",
+        "type": "bool",
+        "default": true
+    },
+    "ban_keywords": {
+        "description": "禁发关键词列表（每行一个）",
+        "type": "list",
+        "default": [],
+        "hint": "匹配到关键词的消息会被拦截并撤回"
+    },
+    "ban_action": {
+        "description": "触发禁发后的操作",
+        "type": "string",
+        "default": "warn",
+        "hint": "warn=仅警告提醒 / mute=禁言 / kick=移出群聊"
+    },
+    "ban_warn_text": {
+        "description": "通用警告文案（备用）",
+        "type": "string",
+        "default": "⚠️ 你发送的内容包含违禁词，请遵守群规！",
+        "hint": "当分层文案留空时回退到此文案"
+    },
+    "ban_warn_text_1": {
+        "description": "第1次违规提示文案",
+        "type": "string",
+        "default": "⚠️ 你发送的内容包含违禁词，请遵守群规！这是第一次提醒，请注意。",
+        "hint": "留空则回退到通用警告文案"
+    },
+    "ban_warn_text_2": {
+        "description": "第2次违规提示文案",
+        "type": "string",
+        "default": "⚠️ 你再次发送了违禁内容！这是第二次警告，请立即停止。",
+        "hint": "留空则回退到通用警告文案"
+    },
+    "ban_warn_text_3": {
+        "description": "第3次违规提示文案",
+        "type": "string",
+        "default": "⚠️ 这已是第三次违规！短时间内继续违规将被自动禁言！",
+        "hint": "留空则回退到通用警告文案"
+    },
+    "ban_warn_text_4plus": {
+        "description": "第4次及以上违规提示文案",
+        "type": "string",
+        "default": "⚠️ 你已多次违规！继续违规将面临踢出群聊的处罚！",
+        "hint": "第4次到踢出阈值之间使用的文案，留空则回退到通用警告文案"
+    },
+    "ban_warn_at_user": {
+        "description": "警告提示是否@违规用户",
+        "type": "bool",
+        "default": true,
+        "hint": "开启后警告消息会@触发违规的用户"
+    },
+    "ban_mute_duration": {
+        "description": "禁言时长（分钟）",
+        "type": "int",
+        "default": 10
+    },
+    "ban_warn_auto_mute_threshold": {
+        "description": "warn模式下，短时间内违规达到此次数自动禁言",
+        "type": "int",
+        "default": 3,
+        "hint": "配合下方时间窗口使用，设为0则不自动禁言"
+    },
+    "ban_warn_auto_mute_window": {
+        "description": "自动禁言检测窗口（秒）",
+        "type": "int",
+        "default": 60,
+        "hint": "在此秒数内达到上方次数则自动禁言"
+    },
+    "ban_warn_auto_kick_threshold": {
+        "description": "warn模式下，当日累计违规达到此次数自动踢出",
+        "type": "int",
+        "default": 10,
+        "hint": "设为0则不自动踢出"
+    },
+    "timer_enable": {
+        "description": "定时消息功能开关",
+        "type": "bool",
+        "default": true
+    },
+    "timer_tasks": {
+        "description": "定时任务列表（自动管理，也可手动编辑）",
+        "type": "list",
+        "default": [],
+        "hint": "格式：HH:MM|群号|once/daily/interval:N|消息内容"
+    }
+}
