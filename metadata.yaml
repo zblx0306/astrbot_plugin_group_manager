@@ -1,19 +1,21 @@
-name: 群管助手
+name: astrbot_plugin_group_manager
 display_name: 群管助手
-desc: 禁发关键词消息拦截 + 定时消息推送，每个功能均可用指令单独开关
-version: "1.4.0"
+desc: 群管综合工具，关键词违禁消息拦截撤回、分层违规警告、自动禁言/踢出、多模式定时消息推送
+version: "1.6.0"
 author: 小寻(≧∇≦)
-repo: ""
+repo: "https://github.com/zblx0306/astrbot_plugin_group_manager"
 help: |
-  /gmg on/off — 总开关
-  /gmg ban on/off — 禁发功能开关
-  /gmg ban list — 查看禁发关键词
-  /gmg ban add 关键词 — 添加禁发关键词
-  /gmg ban del 关键词 — 删除禁发关键词
+  /gmg on/off — 插件总开关
+  /gmg status — 查看插件运行状态
+  --- 违禁词拦截 ---
+  /gmg ban on/off — 违禁拦截开关
+  /gmg ban list — 查看违禁关键词
+  /gmg ban add 关键词 — 添加违禁词
+  /gmg ban del 关键词 — 删除违禁词
   /gmg ban violations — 查看违规记录
   /gmg ban resetviolations — 清空违规记录
-  /gmg timer on/off — 定时消息开关
-  /gmg timer list — 查看定时任务
-  /gmg timer add HH:MM [群号] 消息 [once|daily|interval:N] — 添加定时消息
-  /gmg timer del ID — 删除定时消息
-  /gmg status — 查看整体状态
+  --- 定时消息 ---
+  /gmg timer on/off — 定时推送开关
+  /gmg timer list — 查看全部定时任务
+  /gmg timer add HH:MM [群号] 消息 [once|daily|interval:N] — 新增定时任务
+  /gmg timer del ID — 删除定时任务
